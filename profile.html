@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0cf4fd4891.js" crossorigin="anonymous"></script>
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1><span style="color: black">Ganesh</span>Sammeta</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+              <p>Full Stack Java Developer</p> 
+              <h1>Hi, I'm <span>Ganesh</span> From Hyderabad</h1> 
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="ganesh.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I'm Ganesh. I was born and brought in Nagaram village,which is located in the Warangal district,Telangana,in the year of 2000.And I am from a Nuclear family,where my father is a farmer and my mother is house-wife,and also I've an elder-brother.
+                        <br>I'm straight-forward person.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('family-details')">Family-details</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>B.Tech</span><br>Nalla Narasimha Reddy Group of Institution in stream of CSE with 64%.</li>
+                            <li><span>Intermediate</span><br>Sri Gayatri Junior College with 93%.</li>
+                            <li><span>SSC</span><br>S.T John's High School with 93%.</li>
+                        </ul>    
+                    </div>
+                    <div class="tab-contents" id="family-details">
+                        <ul>
+                            <li><span>Father's Name:</span>Rammurthy</li>
+                            <li><span> Mother's Name:</span> Vimala</li>
+                            <li><span>Brother Name:</span> Rakesh</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+         </div>
+    </div>
+    <!--------Skills-------->
+    <div id="skills">
+        <div class="container">
+        <h1 class="subtitle">Skills</h1> 
+        <div class="skills-list">
+            <div>
+            <h3>Front-End :</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>ReactJs</li>
+            </ul>
+            </div>
+            <div>
+            <h3>Back-end :</h3>
+            <ul>
+                <li>Java</li>
+                <li>SpringBoot</li>
+            </ul>
+            </div>
+            <div>
+            <h3>FrameWork :</h3>
+            <ul>
+                <li>BootStrap</li>
+            </ul>
+            </div>
+            <div>
+            <h3>DataBase :</h3>
+            <ul>
+                <li>mySQL</li>
+            </ul>
+            </div>
+            <div>
+            <h3>Tools :</h3>
+            <ul>
+                <li>Git & GitHub</li>
+                <li>VScode</li>
+            </ul>
+            </div>
+        </div>  
+        </div>
+    </div>
+    <!-------projects------->
+    <div id="projects">
+       <div class="container">
+        <h1 class="subtitle">Projects</h1> 
+        <div class="projects-list">
+            <div>
+                <h3>Banking</h3>
+            </div>
+            <div>
+                <h3>AP Tourism</h3>
+            </div>
+            <div>
+                <h3>Portfolio</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!------Contact------>
+    <div id="contact">
+        <div id="container">
+            <h3 class="subtitle">Contact</h3>
+            <div class="contact-details">
+                <div> 
+                    <p><i class="fa-solid fa-square-phone"></i> 8179809010</p>
+                    <p><i class="fa-solid fa-paper-plane"></i>ganeshsammeta.ts04@gmail.com</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script> 
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
